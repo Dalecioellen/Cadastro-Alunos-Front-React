@@ -1,0 +1,188 @@
+/* Layout moderno para o componente NovoAluno */
+
+/*
+  .novo-aluno-container
+  - min-height: 100vh;         // Ocupa toda a altura da tela
+  - display: flex;             // Usa flexbox para centralizar
+  - align-items: center;       // Centraliza verticalmente
+  - justify-content: center;   // Centraliza horizontalmente
+  - background: ...;           // Fundo gradiente azul claro
+*/
+.novo-aluno-container {
+  min-height: 100vh;           /* Ocupa toda a altura da tela */
+  display: flex;               /* Flexbox para centralizar */
+  align-items: center;         /* Centraliza verticalmente */
+  justify-content: center;     /* Centraliza horizontalmente */
+  background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%); /* Fundo gradiente */
+}
+
+/*
+  .content
+  - background: #fff;          // Fundo branco
+  - padding: ...;              // Espaçamento interno
+  - border-radius: ...;        // Cantos arredondados
+  - box-shadow: ...;           // Sombra suave
+  - display: flex;             // Flexbox coluna
+  - min/max-width: ...;        // Largura responsiva
+*/
+.novo-aluno-container .content {
+  background: #fff;            /* Fundo branco */
+  padding: 2.5rem 2rem;        /* Espaçamento interno */
+  border-radius: 16px;         /* Cantos arredondados */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15); /* Sombra suave */
+  display: flex;               /* Flexbox coluna */
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;            /* Largura mínima */
+  max-width: 400px;            /* Largura máxima */
+  width: 100%;
+  box-sizing: border-box; /* Garante que padding não ultrapasse a largura */
+}
+
+/*
+  h1
+  - font-size: ...;            // Tamanho grande
+  - margin-bottom: ...;        // Espaço abaixo
+  - color: #333;               // Cor escura
+  - font-weight: 700;          // Negrito
+  - letter-spacing: 1px;       // Espaçamento entre letras
+*/
+.novo-aluno-container h1 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/*
+  form
+  - width: 100%;              // Ocupa toda a largura
+  - display: flex;             // Flexbox coluna
+  - gap: 1rem;                 // Espaço entre campos
+*/
+.novo-aluno-container form {
+  width: 100%;
+  max-width: 350px; /* Limita a largura máxima do formulário */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+/*
+  input
+  - width: 100%;              // Ocupa toda a largura
+  - padding: ...;              // Espaço interno
+  - border: ...;               // Borda cinza clara
+  - border-radius: 8px;        // Cantos arredondados
+  - font-size: 1rem;           // Tamanho da fonte
+  - background: #f9f9f9;       // Fundo cinza claro
+  - transition: border 0.2s;   // Animação ao focar
+*/
+.novo-aluno-container form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  transition: border 0.2s;
+  box-sizing: border-box; /* Garante que padding não ultrapasse a largura */
+}
+
+/*
+  input:focus
+  - border: 1.5px solid #6c63ff; // Borda azul ao focar
+  - outline: none;                // Remove contorno padrão
+  - background: #fff;             // Fundo branco ao focar
+*/
+.novo-aluno-container form input:focus {
+  border: 1.5px solid #6c63ff;
+  outline: none;
+  background: #fff;
+}
+
+/*
+  .button
+  - width: 100%;                // Botão ocupa toda a largura
+  - padding: ...;               // Espaço interno
+  - background: ...;            // Gradiente azul
+  - color: #fff;                // Texto branco
+  - border: none;               // Sem borda
+  - border-radius: 8px;         // Cantos arredondados
+  - font-size: 1.1rem;          // Tamanho da fonte
+  - font-weight: 600;           // Negrito
+  - cursor: pointer;            // Mãozinha ao passar
+  - box-shadow: ...;            // Sombra leve
+  - transition: ...;            // Animação suave
+*/
+.novo-aluno-container .button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(90deg, #6c63ff 0%, #48c6ef 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(76, 110, 245, 0.10);
+  transition: background 0.2s, transform 0.1s;
+}
+
+/*
+  .button:hover
+  - background: ...;            // Inverte gradiente ao passar o mouse
+  - transform: ...;             // Efeito de leve subida e zoom
+*/
+.novo-aluno-container .button:hover {
+  background: linear-gradient(90deg, #48c6ef 0%, #6c63ff 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/*
+  .back-link
+  - display: flex;              // Flexbox para centralizar ícone e texto
+  - align-items: center;        // Alinha verticalmente ao centro
+  - gap: 0.5rem;                // Espaço entre ícone e texto
+  - margin: 2rem auto 0 auto;  // Margem superior e centralização
+  - max-width: 400px;           // Largura máxima
+  - padding: 0.7rem 1.2rem;     // Espaçamento interno
+  - background: #f5f6fa;        // Fundo cinza claro
+  - color: #17202a;             // Cor do texto
+  - border-radius: 8px;         // Cantos arredondados
+  - font-size: 1rem;            // Tamanho da fonte
+  - font-weight: 500;           // Peso da fonte
+  - text-decoration: none;      // Sem sublinhado
+  - box-shadow: 0 2px 8px rgba(76, 110, 245, 0.07); // Sombra leve
+  - transition: background 0.2s, color 0.2s; // Transição suave
+}
+*/
+.novo-aluno-container .back-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem auto 0 auto;
+  max-width: 400px;
+  padding: 0.7rem 1.2rem;
+  background: #f5f6fa;
+  color: #17202a;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(76, 110, 245, 0.07);
+  transition: background 0.2s, color 0.2s;
+}
+
+/*
+  .back-link:hover
+  - background: #e0eafc;        // Fundo azul claro ao passar o mouse
+  - color: #6c63ff;             // Texto azul escuro ao passar o mouse
+*/
+.novo-aluno-container .back-link:hover {
+  background: #e0eafc;
+  color: #6c63ff;
+}
